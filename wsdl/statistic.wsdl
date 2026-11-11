@@ -1,0 +1,2695 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://statistic.xyp.gov.mn/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="StatisticServiceService" targetNamespace="http://statistic.xyp.gov.mn/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://statistic.xyp.gov.mn/" elementFormDefault="unqualified" targetNamespace="http://statistic.xyp.gov.mn/" version="1.0">
+
+  <xs:element name="WS200101_citizenInfo" type="tns:WS200101_citizenInfo"/>
+
+  <xs:element name="WS200101_citizenInfoResponse" type="tns:WS200101_citizenInfoResponse"/>
+
+  <xs:element name="WS200102_citizenPastureInfo" type="tns:WS200102_citizenPastureInfo"/>
+
+  <xs:element name="WS200102_citizenPastureInfoResponse" type="tns:WS200102_citizenPastureInfoResponse"/>
+
+  <xs:element name="WS200103_personInfo" type="tns:WS200103_personInfo"/>
+
+  <xs:element name="WS200103_personInfoResponse" type="tns:WS200103_personInfoResponse"/>
+
+  <xs:element name="WS200104_householdMemberInfo" type="tns:WS200104_householdMemberInfo"/>
+
+  <xs:element name="WS200104_householdMemberInfoResponse" type="tns:WS200104_householdMemberInfoResponse"/>
+
+  <xs:element name="WS200105_householdInfo" type="tns:WS200105_householdInfo"/>
+
+  <xs:element name="WS200105_householdInfoResponse" type="tns:WS200105_householdInfoResponse"/>
+
+  <xs:element name="WS200106_citizenSuggestionInfo" type="tns:WS200106_citizenSuggestionInfo"/>
+
+  <xs:element name="WS200106_citizenSuggestionInfoResponse" type="tns:WS200106_citizenSuggestionInfoResponse"/>
+
+  <xs:element name="WS200107_ldfundedSurveyService" type="tns:WS200107_ldfundedSurveyService"/>
+
+  <xs:element name="WS200107_ldfundedSurveyServiceResponse" type="tns:WS200107_ldfundedSurveyServiceResponse"/>
+
+  <xs:element name="WS200108_additionalSurveyService" type="tns:WS200108_additionalSurveyService"/>
+
+  <xs:element name="WS200108_additionalSurveyServiceResponse" type="tns:WS200108_additionalSurveyServiceResponse"/>
+
+  <xs:element name="WS200109_deleteAdditionalSurveyService" type="tns:WS200109_deleteAdditionalSurveyService"/>
+
+  <xs:element name="WS200109_deleteAdditionalSurveyServiceResponse" type="tns:WS200109_deleteAdditionalSurveyServiceResponse"/>
+
+  <xs:element name="WS200110_livestockTaxSurveyService" type="tns:WS200110_livestockTaxSurveyService"/>
+
+  <xs:element name="WS200110_livestockTaxSurveyServiceResponse" type="tns:WS200110_livestockTaxSurveyServiceResponse"/>
+
+  <xs:element name="WS200111_deleteLivestockTaxSurveyService" type="tns:WS200111_deleteLivestockTaxSurveyService"/>
+
+  <xs:element name="WS200111_deleteLivestockTaxSurveyServiceResponse" type="tns:WS200111_deleteLivestockTaxSurveyServiceResponse"/>
+
+  <xs:element name="WS200112_getLivestockTaxType" type="tns:WS200112_getLivestockTaxType"/>
+
+  <xs:element name="WS200112_getLivestockTaxTypeResponse" type="tns:WS200112_getLivestockTaxTypeResponse"/>
+
+  <xs:element name="WS200113_citizenFeedbackVerify" type="tns:WS200113_citizenFeedbackVerify"/>
+
+  <xs:element name="WS200113_citizenFeedbackVerifyResponse" type="tns:WS200113_citizenFeedbackVerifyResponse"/>
+
+  <xs:element name="WS200114_citizenStatisticInfo" type="tns:WS200114_citizenStatisticInfo"/>
+
+  <xs:element name="WS200114_citizenStatisticInfoResponse" type="tns:WS200114_citizenStatisticInfoResponse"/>
+
+  <xs:element name="WS200115_changeRegisterInfo" type="tns:WS200115_changeRegisterInfo"/>
+
+  <xs:element name="WS200115_changeRegisterInfoResponse" type="tns:WS200115_changeRegisterInfoResponse"/>
+
+  <xs:element name="WS200116_changeNameInfo" type="tns:WS200116_changeNameInfo"/>
+
+  <xs:element name="WS200116_changeNameInfoResponse" type="tns:WS200116_changeNameInfoResponse"/>
+
+  <xs:element name="WS200117_citizenLivestockInfo" type="tns:WS200117_citizenLivestockInfo"/>
+
+  <xs:element name="WS200117_citizenLivestockInfoResponse" type="tns:WS200117_citizenLivestockInfoResponse"/>
+
+  <xs:element name="WS200118_legalEntityLivestockInfo" type="tns:WS200118_legalEntityLivestockInfo"/>
+
+  <xs:element name="WS200118_legalEntityLivestockInfoResponse" type="tns:WS200118_legalEntityLivestockInfoResponse"/>
+
+  <xs:element name="WS200119_femaleResidentCountByLocation" type="tns:WS200119_femaleResidentCountByLocation"/>
+
+  <xs:element name="WS200119_femaleResidentCountByLocationResponse" type="tns:WS200119_femaleResidentCountByLocationResponse"/>
+
+  <xs:element name="WS200120_maleResidentCountByLocation" type="tns:WS200120_maleResidentCountByLocation"/>
+
+  <xs:element name="WS200120_maleResidentCountByLocationResponse" type="tns:WS200120_maleResidentCountByLocationResponse"/>
+
+  <xs:element name="WS200121_residentCountByLocation" type="tns:WS200121_residentCountByLocation"/>
+
+  <xs:element name="WS200121_residentCountByLocationResponse" type="tns:WS200121_residentCountByLocationResponse"/>
+
+  <xs:element name="WS200122_houseHoldCountByLocation" type="tns:WS200122_houseHoldCountByLocation"/>
+
+  <xs:element name="WS200122_houseHoldCountByLocationResponse" type="tns:WS200122_houseHoldCountByLocationResponse"/>
+
+  <xs:element name="WS200123_houseHoldLiveStockInfo" type="tns:WS200123_houseHoldLiveStockInfo"/>
+
+  <xs:element name="WS200123_houseHoldLiveStockInfoResponse" type="tns:WS200123_houseHoldLiveStockInfoResponse"/>
+
+  <xs:element name="WS200124_umnsLivestockInfo" type="tns:WS200124_umnsLivestockInfo"/>
+
+  <xs:element name="WS200124_umnsLivestockInfoResponse" type="tns:WS200124_umnsLivestockInfoResponse"/>
+
+  <xs:element name="WS200125_householdInfoByRegnum" type="tns:WS200125_householdInfoByRegnum"/>
+
+  <xs:element name="WS200125_householdInfoByRegnumResponse" type="tns:WS200125_householdInfoByRegnumResponse"/>
+
+  <xs:element name="WS200126_umnsHouseholdInfo" type="tns:WS200126_umnsHouseholdInfo"/>
+
+  <xs:element name="WS200126_umnsHouseholdInfoResponse" type="tns:WS200126_umnsHouseholdInfoResponse"/>
+
+  <xs:element name="WS200127_citizenLivestockList" type="tns:WS200127_citizenLivestockList"/>
+
+  <xs:element name="WS200127_citizenLivestockListResponse" type="tns:WS200127_citizenLivestockListResponse"/>
+
+  <xs:element name="WS200128_legalEntityLivestockList" type="tns:WS200128_legalEntityLivestockList"/>
+
+  <xs:element name="WS200128_legalEntityLivestockListResponse" type="tns:WS200128_legalEntityLivestockListResponse"/>
+
+  <xs:element name="WS200129_disabledWorkerNum" type="tns:WS200129_disabledWorkerNum"/>
+
+  <xs:element name="WS200129_disabledWorkerNumResponse" type="tns:WS200129_disabledWorkerNumResponse"/>
+
+  <xs:element name="WS200130_citizenLivestockByRegion" type="tns:WS200130_citizenLivestockByRegion"/>
+
+  <xs:element name="WS200130_citizenLivestockByRegionResponse" type="tns:WS200130_citizenLivestockByRegionResponse"/>
+
+  <xs:element name="WS200131_legalEntityLivestockByRegion" type="tns:WS200131_legalEntityLivestockByRegion"/>
+
+  <xs:element name="WS200131_legalEntityLivestockByRegionResponse" type="tns:WS200131_legalEntityLivestockByRegionResponse"/>
+
+  <xs:element name="WS200133_citizenAddressInfo" type="tns:WS200133_citizenAddressInfo"/>
+
+  <xs:element name="WS200133_citizenAddressInfoResponse" type="tns:WS200133_citizenAddressInfoResponse"/>
+
+  <xs:element name="WS200134_citizenAndLegalEntityLivestockInfo" type="tns:WS200134_citizenAndLegalEntityLivestockInfo"/>
+
+  <xs:element name="WS200134_citizenAndLegalEntityLivestockInfoResponse" type="tns:WS200134_citizenAndLegalEntityLivestockInfoResponse"/>
+
+  <xs:element name="WS200135_citizenAndLegalEntityLivestockInfo" type="tns:WS200135_citizenAndLegalEntityLivestockInfo"/>
+
+  <xs:element name="WS200135_citizenAndLegalEntityLivestockInfoResponse" type="tns:WS200135_citizenAndLegalEntityLivestockInfoResponse"/>
+
+  <xs:element name="WS200136_getHouseholdInfo" type="tns:WS200136_getHouseholdInfo"/>
+
+  <xs:element name="WS200136_getHouseholdInfoResponse" type="tns:WS200136_getHouseholdInfoResponse"/>
+
+  <xs:element name="WS200137_getCitizenEstimationInfo" type="tns:WS200137_getCitizenEstimationInfo"/>
+
+  <xs:element name="WS200137_getCitizenEstimationInfoResponse" type="tns:WS200137_getCitizenEstimationInfoResponse"/>
+
+  <xs:element name="WS200138_GetImeiLostDeviceList" type="tns:WS200138_GetImeiLostDeviceList"/>
+
+  <xs:element name="WS200138_GetImeiLostDeviceListResponse" type="tns:WS200138_GetImeiLostDeviceListResponse"/>
+
+  <xs:element name="WS200139_EStandardList" type="tns:WS200139_EStandardList"/>
+
+  <xs:element name="WS200139_EStandardListResponse" type="tns:WS200139_EStandardListResponse"/>
+
+  <xs:element name="WS200140_EStandardDownloadPDF" type="tns:WS200140_EStandardDownloadPDF"/>
+
+  <xs:element name="WS200140_EStandardDownloadPDFResponse" type="tns:WS200140_EStandardDownloadPDFResponse"/>
+
+  <xs:element name="WS200141_StatisticReportA" type="tns:WS200141_StatisticReportA"/>
+
+  <xs:element name="WS200141_StatisticReportAResponse" type="tns:WS200141_StatisticReportAResponse"/>
+
+  <xs:complexType name="WS200101_citizenInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:statisticCitizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="statisticCitizenRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auth" type="tns:authorizationData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorizationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="citizen" type="tns:authorizationEntity"/>
+      <xs:element minOccurs="0" name="operator" type="tns:authorizationEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorizationEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appAuthToken" type="xs:string"/>
+      <xs:element minOccurs="0" name="authAppName" type="xs:string"/>
+      <xs:element minOccurs="0" name="authType" type="xs:int"/>
+      <xs:element minOccurs="0" name="certFingerprint" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="fingerprint" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="otp" type="xs:int"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="signature" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200101_citizenInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="xs:anyType"/>
+      <xs:element minOccurs="0" name="requestId" type="xs:string"/>
+      <xs:element minOccurs="0" name="response" type="xs:anyType"/>
+      <xs:element name="resultCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="resultMessage" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="statisticCitizenData">
+    <xs:sequence>
+      <xs:element name="districtCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element name="microDistrictCode" type="xs:int"/>
+      <xs:element name="provinceCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element name="year" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200116_changeNameInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:statisticDateRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="statisticDateRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="date" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200116_changeNameInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="changeNameData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:changeNameDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="changeNameDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="date" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="newFirstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="newLastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="newSurname" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200135_citizenAndLegalEntityLivestockInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenAndLegalEntityLivestockInfoRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenAndLegalEntityLivestockInfoRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200135_citizenAndLegalEntityLivestockInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenAndLegalEntityLivestockInfoData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="addresses" nillable="true" type="tns:citizenAndLegalEntityLivestockInfoAddressDetailData"/>
+      <xs:element minOccurs="0" name="code" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element name="herdsman" type="xs:int"/>
+      <xs:element minOccurs="0" name="herdsmanStr" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="referenceDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element name="totalAnimal" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenAndLegalEntityLivestockInfoAddressDetailData">
+    <xs:sequence>
+      <xs:element name="addressTotal" type="xs:int"/>
+      <xs:element minOccurs="0" name="aimag" type="xs:string"/>
+      <xs:element minOccurs="0" name="animalName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bag" type="xs:string"/>
+      <xs:element name="count" type="xs:int"/>
+      <xs:element name="countTag" type="xs:int"/>
+      <xs:element minOccurs="0" name="soum" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200136_getHouseholdInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getHouseholdInfoRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getHouseholdInfoRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="household" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200136_getHouseholdInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getHouseholdInfoData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="agricultureAreaQ" type="xs:string"/>
+      <xs:element minOccurs="0" name="areaQ" type="xs:string"/>
+      <xs:element minOccurs="0" name="drainTypeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="drainTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="electricityTypeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="electricityTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="heaterTypeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="heaterTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="houseTypeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="houseTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="householdNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="isAgriculture" type="xs:string"/>
+      <xs:element minOccurs="0" name="isAgricultureCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="isComputer" type="xs:string"/>
+      <xs:element minOccurs="0" name="isComputerCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="isInternet" type="xs:string"/>
+      <xs:element minOccurs="0" name="isInternetCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="isLivestock" type="xs:string"/>
+      <xs:element minOccurs="0" name="isLivestockCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="isMachine1" type="xs:string"/>
+      <xs:element minOccurs="0" name="isMachine2" type="xs:string"/>
+      <xs:element minOccurs="0" name="isMachine3" type="xs:string"/>
+      <xs:element minOccurs="0" name="isMachine4" type="xs:string"/>
+      <xs:element minOccurs="0" name="isMachine5" type="xs:string"/>
+      <xs:element minOccurs="0" name="isMachine6" type="xs:string"/>
+      <xs:element minOccurs="0" name="isProduction" type="xs:string"/>
+      <xs:element minOccurs="0" name="isProductionCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="ownTypeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="ownTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyTypeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="toiletTypeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="toiletTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="wasteTypeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="wasteTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="waterTypeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="waterTypeName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200102_citizenPastureInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:statisticCitizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200102_citizenPastureInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="statisticCitizenPetsData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:statisticCitizenPetsDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="statisticCitizenPetsDetailData">
+    <xs:sequence>
+      <xs:element name="attackedByWildAnimals" type="xs:int"/>
+      <xs:element name="disease" type="xs:int"/>
+      <xs:element name="fiveAndAboveYearsOldFemale" type="xs:int"/>
+      <xs:element name="fiveAndAboveYearsOldMale" type="xs:int"/>
+      <xs:element name="found" type="xs:int"/>
+      <xs:element name="fourYearsOldFemale" type="xs:int"/>
+      <xs:element name="fourYearsOldMale" type="xs:int"/>
+      <xs:element name="livestockTypeCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="livestockTypeName" type="xs:string"/>
+      <xs:element name="lossesAdultAnimals" type="xs:int"/>
+      <xs:element name="lost" type="xs:int"/>
+      <xs:element name="naturalDisaster" type="xs:int"/>
+      <xs:element name="newborn" type="xs:int"/>
+      <xs:element name="newbornLastYearFemale" type="xs:int"/>
+      <xs:element name="newbornLastYearMale" type="xs:int"/>
+      <xs:element name="newbornSires" type="xs:int"/>
+      <xs:element name="newbornSiresNew" type="xs:int"/>
+      <xs:element name="newbornThisYearFemale" type="xs:int"/>
+      <xs:element name="newbornThisYearMale" type="xs:int"/>
+      <xs:element name="other" type="xs:int"/>
+      <xs:element name="purchased" type="xs:int"/>
+      <xs:element name="sold" type="xs:int"/>
+      <xs:element name="soldForSlaughter" type="xs:int"/>
+      <xs:element name="threeYearsOldFemale" type="xs:int"/>
+      <xs:element name="threeYearsOldMale" type="xs:int"/>
+      <xs:element name="total" type="xs:int"/>
+      <xs:element name="totalLastYear" type="xs:int"/>
+      <xs:element name="transferredIn" type="xs:int"/>
+      <xs:element name="transferredOut" type="xs:int"/>
+      <xs:element name="twoYearsOldFemale" type="xs:int"/>
+      <xs:element name="twoYearsOldMale" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200137_getCitizenEstimationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenEstimationRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenEstimationRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200137_getCitizenEstimationInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenEstimationData">
+    <xs:sequence>
+      <xs:element name="citizenEstimationCount" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200114_citizenStatisticInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:statisticCitizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200114_citizenStatisticInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenStatisticData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apartmentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthdate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="careerTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="cityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilStatusName" type="xs:string"/>
+      <xs:element minOccurs="0" name="detail" type="xs:string"/>
+      <xs:element minOccurs="0" name="districtName" type="xs:string"/>
+      <xs:element minOccurs="0" name="educationName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="gender" type="xs:string"/>
+      <xs:element minOccurs="0" name="khorooName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="maritalStatusName" type="xs:string"/>
+      <xs:element minOccurs="0" name="nationalityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="originName" type="xs:string"/>
+      <xs:element minOccurs="0" name="photo" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="professionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="regionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="streetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+      <xs:element minOccurs="0" name="townName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200130_citizenLivestockByRegion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:livestockByRegionRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="livestockByRegionRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="aimagCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="soumCode" type="xs:string"/>
+          <xs:element name="year" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200130_citizenLivestockByRegionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenLivestockByRegionData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:citizenLivestockByRegionDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenLivestockByRegionDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aimagCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagName" type="xs:string"/>
+      <xs:element name="camel" type="xs:int"/>
+      <xs:element name="cattle" type="xs:int"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element name="goat" type="xs:int"/>
+      <xs:element name="hhType" type="xs:int"/>
+      <xs:element minOccurs="0" name="hhTypeName" type="xs:string"/>
+      <xs:element name="horse" type="xs:int"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element name="sheep" type="xs:int"/>
+      <xs:element minOccurs="0" name="soumCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumName" type="xs:string"/>
+      <xs:element name="total" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200103_personInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:personInfoRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="personInfoRequest">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200103_personInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="personData">
+    <xs:sequence>
+      <xs:element name="abroadCountryCode" type="xs:int"/>
+      <xs:element name="abroadPurposeCode" type="xs:int"/>
+      <xs:element name="abroadYearCode" type="xs:int"/>
+      <xs:element name="aimagCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="aimagName" type="xs:string"/>
+      <xs:element name="apartmentNo" type="xs:int"/>
+      <xs:element name="bagCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="bagName" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="buildingNo" type="xs:string"/>
+      <xs:element name="disabilityCode" type="xs:int"/>
+      <xs:element name="educationCode" type="xs:int"/>
+      <xs:element name="employmentCode" type="xs:int"/>
+      <xs:element name="entryNo" type="xs:int"/>
+      <xs:element minOccurs="0" name="familyName" type="xs:string"/>
+      <xs:element name="genderCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="genderName" type="xs:string"/>
+      <xs:element minOccurs="0" name="givenName" type="xs:string"/>
+      <xs:element name="hesegCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="hesegName" type="xs:string"/>
+      <xs:element minOccurs="0" name="householdNo" type="xs:string"/>
+      <xs:element name="incomeCode" type="xs:int"/>
+      <xs:element name="isEmploymentCode" type="xs:int"/>
+      <xs:element name="isicCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="isicCodeStr" type="xs:string"/>
+      <xs:element name="marriageCode" type="xs:int"/>
+      <xs:element name="occupationCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="organizationName" type="xs:string"/>
+      <xs:element name="originCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="originName" type="xs:string"/>
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="profession1" type="xs:string"/>
+      <xs:element minOccurs="0" name="profession2" type="xs:string"/>
+      <xs:element minOccurs="0" name="profession3" type="xs:string"/>
+      <xs:element minOccurs="0" name="profession4" type="xs:string"/>
+      <xs:element minOccurs="0" name="profession5" type="xs:string"/>
+      <xs:element minOccurs="0" name="registerNo" type="xs:string"/>
+      <xs:element name="residenceCode" type="xs:int"/>
+      <xs:element name="SUBCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="socialWelfare1" type="xs:string"/>
+      <xs:element minOccurs="0" name="socialWelfare10" type="xs:string"/>
+      <xs:element minOccurs="0" name="socialWelfare11" type="xs:string"/>
+      <xs:element minOccurs="0" name="socialWelfare12" type="xs:string"/>
+      <xs:element minOccurs="0" name="socialWelfare13" type="xs:string"/>
+      <xs:element minOccurs="0" name="socialWelfare2" type="xs:string"/>
+      <xs:element minOccurs="0" name="socialWelfare3" type="xs:string"/>
+      <xs:element minOccurs="0" name="socialWelfare4" type="xs:string"/>
+      <xs:element minOccurs="0" name="socialWelfare5" type="xs:string"/>
+      <xs:element minOccurs="0" name="socialWelfare6" type="xs:string"/>
+      <xs:element minOccurs="0" name="socialWelfare7" type="xs:string"/>
+      <xs:element minOccurs="0" name="socialWelfare8" type="xs:string"/>
+      <xs:element minOccurs="0" name="socialWelfare9" type="xs:string"/>
+      <xs:element name="soldierCode" type="xs:int"/>
+      <xs:element name="soumCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="soumName" type="xs:string"/>
+      <xs:element minOccurs="0" name="statusName" type="xs:string"/>
+      <xs:element minOccurs="0" name="streetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="surName" type="xs:string"/>
+      <xs:element name="unEmploymentReasonCode" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200112_getLivestockTaxType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:surveyIdRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="surveyIdRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="surveyId" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200112_getLivestockTaxTypeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getLivestockTaxTypeData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:getLivestockTaxTypeDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getLivestockTaxTypeDetailData">
+    <xs:sequence>
+      <xs:element name="code" type="xs:int"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200123_houseHoldLiveStockInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:householdRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="householdRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="householdNumber" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200123_houseHoldLiveStockInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="houseHoldLiveStockInfoData">
+    <xs:sequence>
+      <xs:element name="camel" type="xs:int"/>
+      <xs:element name="cattle" type="xs:int"/>
+      <xs:element minOccurs="0" name="familyname" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element name="goat" type="xs:int"/>
+      <xs:element name="hhTypeCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="hhTypeName" type="xs:string"/>
+      <xs:element name="horse" type="xs:int"/>
+      <xs:element minOccurs="0" name="houseHoldNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element name="sheep" type="xs:int"/>
+      <xs:element name="total" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200139_EStandardList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:eStandardListRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eStandardListRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="status" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200139_EStandardListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eStandardListData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="list" nillable="true" type="tns:eStandardListResponseData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eStandardListResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="acceptDate" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="categoryMultiId" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="categoryMultiName" type="xs:string"/>
+      <xs:element minOccurs="0" name="createDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="homeFile" type="xs:string"/>
+      <xs:element minOccurs="0" name="id" type="xs:string"/>
+      <xs:element minOccurs="0" name="internationalLevel" type="xs:string"/>
+      <xs:element minOccurs="0" name="isActive" type="xs:string"/>
+      <xs:element minOccurs="0" name="pageNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="previewPercent" type="xs:string"/>
+      <xs:element minOccurs="0" name="price" type="xs:string"/>
+      <xs:element minOccurs="0" name="referencesToTechnicalRegulations" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sdgMultiId" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="sourceFile" type="xs:string"/>
+      <xs:element minOccurs="0" name="standardCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="standardNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="standardTypeLabel" type="xs:string"/>
+      <xs:element minOccurs="0" name="standardTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="statusId" type="xs:string"/>
+      <xs:element minOccurs="0" name="technicalCommitteeId" type="xs:string"/>
+      <xs:element minOccurs="0" name="technicalCommitteeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="titleEng" type="xs:string"/>
+      <xs:element minOccurs="0" name="titleMng" type="xs:string"/>
+      <xs:element minOccurs="0" name="trackingDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="typeId" type="xs:string"/>
+      <xs:element minOccurs="0" name="cDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="cUserName" type="xs:string"/>
+      <xs:element minOccurs="0" name="mDate" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200111_deleteLivestockTaxSurveyService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:surveyIdRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200111_deleteLivestockTaxSurveyServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ldfSurveyData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="result" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200127_citizenLivestockList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenLivestockInfoRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenLivestockInfoRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element name="year" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200127_citizenLivestockListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenLivestockInfoData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:citizenLivestockInfoDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenLivestockInfoDetailData">
+    <xs:sequence>
+      <xs:element name="attackedByWildAnimals" type="xs:int"/>
+      <xs:element name="dicease" type="xs:int"/>
+      <xs:element name="fiveAndAboveYearsOldFemale" type="xs:int"/>
+      <xs:element name="fiveAndAboveYearsOldMale" type="xs:int"/>
+      <xs:element name="found" type="xs:int"/>
+      <xs:element name="fourYearsOldFemale" type="xs:int"/>
+      <xs:element name="fourYearsOldMale" type="xs:int"/>
+      <xs:element name="livestockTypeCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="livestockTypeName" type="xs:string"/>
+      <xs:element name="lossesAdultAnimals" type="xs:int"/>
+      <xs:element name="lost" type="xs:int"/>
+      <xs:element name="naturalDisaster" type="xs:int"/>
+      <xs:element name="newborn" type="xs:int"/>
+      <xs:element name="newbornLastYearFemale" type="xs:int"/>
+      <xs:element name="newbornLastYearMale" type="xs:int"/>
+      <xs:element name="newbornSires" type="xs:int"/>
+      <xs:element name="newbornSiresNew" type="xs:int"/>
+      <xs:element name="newbornThisYearFemale" type="xs:int"/>
+      <xs:element name="newbornThisYearMale" type="xs:int"/>
+      <xs:element name="other" type="xs:int"/>
+      <xs:element name="purchased" type="xs:int"/>
+      <xs:element name="sold" type="xs:int"/>
+      <xs:element name="soldForSlaughter" type="xs:int"/>
+      <xs:element name="threeYearsOldFemale" type="xs:int"/>
+      <xs:element name="threeYearsOldMale" type="xs:int"/>
+      <xs:element name="total" type="xs:int"/>
+      <xs:element name="totalLastYear" type="xs:int"/>
+      <xs:element name="transferredIn" type="xs:int"/>
+      <xs:element name="transferredOut" type="xs:int"/>
+      <xs:element name="twoYearsOldFemale" type="xs:int"/>
+      <xs:element name="twoYearsOldMale" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200133_citizenAddressInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:personInfoRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200133_citizenAddressInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="personAddressData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressDetail" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagName" type="xs:string"/>
+      <xs:element minOccurs="0" name="apartmentNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagName" type="xs:string"/>
+      <xs:element minOccurs="0" name="buildingNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="entryNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="givenName" type="xs:string"/>
+      <xs:element minOccurs="0" name="hesegCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="hesegName" type="xs:string"/>
+      <xs:element minOccurs="0" name="registerNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumName" type="xs:string"/>
+      <xs:element minOccurs="0" name="streetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200115_changeRegisterInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:statisticDateRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200115_changeRegisterInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="changeRegisterData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:changeRegisterDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="changeRegisterDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="date" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="regnumNew" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnumOld" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200134_citizenAndLegalEntityLivestockInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenAndLegalEntityLivestockInfoRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200134_citizenAndLegalEntityLivestockInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200105_householdInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:householdRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200105_householdInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="householdData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="agricultureAreaQ" type="xs:string"/>
+      <xs:element minOccurs="0" name="areaQ" type="xs:string"/>
+      <xs:element name="drainTypeCode" type="xs:int"/>
+      <xs:element name="electricityTypeCode" type="xs:int"/>
+      <xs:element name="heaterTypeCode" type="xs:int"/>
+      <xs:element name="houseTypeCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="householdNumber" type="xs:string"/>
+      <xs:element name="isAgricultureCode" type="xs:int"/>
+      <xs:element name="isComputerCode" type="xs:int"/>
+      <xs:element name="isInternetCode" type="xs:int"/>
+      <xs:element name="isLivestockCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="isMachineFive" type="xs:string"/>
+      <xs:element minOccurs="0" name="isMachineFour" type="xs:string"/>
+      <xs:element minOccurs="0" name="isMachineOne" type="xs:string"/>
+      <xs:element minOccurs="0" name="isMachineSix" type="xs:string"/>
+      <xs:element minOccurs="0" name="isMachineThree" type="xs:string"/>
+      <xs:element minOccurs="0" name="isMachineTwo" type="xs:string"/>
+      <xs:element name="isProductionCode" type="xs:int"/>
+      <xs:element name="ownTypeCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string"/>
+      <xs:element name="propertyTypeCode" type="xs:int"/>
+      <xs:element name="toiletTypeCode" type="xs:int"/>
+      <xs:element name="wasteTypeCode" type="xs:int"/>
+      <xs:element name="waterTypeCode" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200125_householdInfoByRegnum">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:personRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="personRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200125_householdInfoByRegnumResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="householdInfoByRegnumData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:householdInfoByRegnumDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="householdInfoByRegnumDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200126_umnsHouseholdInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:personRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200126_umnsHouseholdInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="umnsHouseholdData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:umnsHouseholdDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="umnsHouseholdDetailData">
+    <xs:sequence>
+      <xs:element name="age" type="xs:int"/>
+      <xs:element minOccurs="0" name="aimagCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagName" type="xs:string"/>
+      <xs:element name="childNum" type="xs:int"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="householdNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element name="members" type="xs:int"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="relationCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="relationName" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200141_StatisticReportA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:statisticReportARequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="statisticReportARequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="code" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200141_StatisticReportAResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="statisticReportAResponseData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="list" nillable="true" type="tns:statisticReportADetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="statisticReportADetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ac" type="xs:string"/>
+      <xs:element minOccurs="0" name="bk" type="xs:string"/>
+      <xs:element minOccurs="0" name="c" type="xs:string"/>
+      <xs:element minOccurs="0" name="check" type="xs:string"/>
+      <xs:element minOccurs="0" name="checkNew" type="xs:string"/>
+      <xs:element minOccurs="0" name="del" type="xs:string"/>
+      <xs:element minOccurs="0" name="desc" type="xs:string"/>
+      <xs:element minOccurs="0" name="em" type="xs:string"/>
+      <xs:element minOccurs="0" name="orgName" type="xs:string"/>
+      <xs:element minOccurs="0" name="orgNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="phone" type="xs:string"/>
+      <xs:element minOccurs="0" name="sd" type="xs:string"/>
+      <xs:element name="eCnt" type="xs:int"/>
+      <xs:element name="eFemale" type="xs:int"/>
+      <xs:element name="eMale" type="xs:int"/>
+      <xs:element minOccurs="0" name="sCnt" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200113_citizenFeedbackVerify">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenFeedbackVerifyRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenFeedbackVerifyRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element name="value" type="xs:int"/>
+          <xs:element name="year" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200113_citizenFeedbackVerifyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200117_citizenLivestockInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenLivestockRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenLivestockRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element name="year" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200117_citizenLivestockInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenLivestockData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bagName" type="xs:string"/>
+      <xs:element name="camelCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="cityName" type="xs:string"/>
+      <xs:element name="cowCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="districtName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element name="goatCount" type="xs:int"/>
+      <xs:element name="horseCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element name="sheepCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="spouseFirstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="spouseLastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="spouseRD" type="xs:string"/>
+      <xs:element name="status" type="xs:int"/>
+      <xs:element name="totalCount" type="xs:int"/>
+      <xs:element name="year" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200122_houseHoldCountByLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:residentInfoByLocationRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="residentInfoByLocationRequest">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="aimagCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="bagCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="sumCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200122_houseHoldCountByLocationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="houseHoldCountByLocationData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:houseHoldCountByLocationDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="houseHoldCountByLocationDetailData">
+    <xs:sequence>
+      <xs:element name="aimagCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="aimagName" type="xs:string"/>
+      <xs:element name="bagCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="bagName" type="xs:string"/>
+      <xs:element name="members" type="xs:int"/>
+      <xs:element name="sumCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="sumName" type="xs:string"/>
+      <xs:element name="total" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200120_maleResidentCountByLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:residentInfoByLocationRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200120_maleResidentCountByLocationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="residentInfoByLocationData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:residentInfoByLocationDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="residentInfoByLocationDetailData">
+    <xs:sequence>
+      <xs:element name="age" type="xs:int"/>
+      <xs:element minOccurs="0" name="ageGroup" type="xs:string"/>
+      <xs:element name="aimagCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="aimagName" type="xs:string"/>
+      <xs:element name="bagCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="bagName" type="xs:string"/>
+      <xs:element name="sumCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="sumName" type="xs:string"/>
+      <xs:element name="total" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200107_ldfundedSurveyService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:ldFundedSurveyRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ldFundedSurveyRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="activityCode" type="xs:long"/>
+          <xs:element name="code" type="xs:int"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element name="value" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200107_ldfundedSurveyServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200140_EStandardDownloadPDF">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:eStandardDownloadPDFRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eStandardDownloadPDFRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="email" type="xs:string"/>
+          <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+          <xs:element minOccurs="0" name="invoiceNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+          <xs:element minOccurs="0" name="legalEntityNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="legalName" type="xs:string"/>
+          <xs:element name="price" type="xs:int"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element minOccurs="0" name="standardId" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200140_EStandardDownloadPDFResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eStandardDownloadPDFResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="value" type="xs:base64Binary"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200108_additionalSurveyService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:additionalSurveyRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="additionalSurveyRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="activityName" type="xs:string"/>
+          <xs:element name="bagCode" type="xs:int"/>
+          <xs:element minOccurs="0" name="capacity" type="xs:string"/>
+          <xs:element name="code" type="xs:int"/>
+          <xs:element minOccurs="0" name="location" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element minOccurs="0" name="socialImpact" type="xs:string"/>
+          <xs:element name="targetNumber" type="xs:int"/>
+          <xs:element name="year" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200108_additionalSurveyServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200104_householdMemberInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:householdMemberRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="householdMemberRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="householdNumber" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200104_householdMemberInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="householdMemberData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:householdMemberDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="householdMemberDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="birthDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element name="genderCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="genderName" type="xs:string"/>
+      <xs:element minOccurs="0" name="householdNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element name="members" type="xs:int"/>
+      <xs:element name="originCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="originName" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element name="relationCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="relationName" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200124_umnsLivestockInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:personRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200124_umnsLivestockInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="umnsLivestockData">
+    <xs:sequence>
+      <xs:element name="camelCount" type="xs:int"/>
+      <xs:element name="cattleCount" type="xs:int"/>
+      <xs:element name="goatCount" type="xs:int"/>
+      <xs:element name="horseCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element name="sheepCount" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200119_femaleResidentCountByLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:residentInfoByLocationRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200119_femaleResidentCountByLocationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200121_residentCountByLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:residentInfoByLocationRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200121_residentCountByLocationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200131_legalEntityLivestockByRegion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:livestockByRegionRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200131_legalEntityLivestockByRegionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityLivestockByRegionData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:legalEntityLivestockByRegionDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityLivestockByRegionDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aimagCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagName" type="xs:string"/>
+      <xs:element name="camel" type="xs:int"/>
+      <xs:element name="cattle" type="xs:int"/>
+      <xs:element name="entType" type="xs:int"/>
+      <xs:element minOccurs="0" name="entTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="enterpriseNAme" type="xs:string"/>
+      <xs:element name="goat" type="xs:int"/>
+      <xs:element name="horse" type="xs:int"/>
+      <xs:element minOccurs="0" name="orgRegnum" type="xs:string"/>
+      <xs:element name="sheep" type="xs:int"/>
+      <xs:element minOccurs="0" name="soumCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumName" type="xs:string"/>
+      <xs:element name="total" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200129_disabledWorkerNum">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:disabledWorkerNumRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="disabledWorkerNumRequest">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orgNDid" type="xs:string"/>
+          <xs:element minOccurs="0" name="orgRegnum" type="xs:string"/>
+          <xs:element minOccurs="0" name="year" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200129_disabledWorkerNumResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="disabledWorkerNumData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:disabledWorkerNumDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="disabledWorkerNumDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="disabledPersonNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="insuredPersonNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="month" type="xs:string"/>
+      <xs:element minOccurs="0" name="year" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200109_deleteAdditionalSurveyService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:surveyIdRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200109_deleteAdditionalSurveyServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200128_legalEntityLivestockList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityLivestockInfoRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityLivestockInfoRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="organizationRegnum" type="xs:string"/>
+          <xs:element name="year" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200128_legalEntityLivestockListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityLivestockInfoData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:citizenLivestockInfoDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200118_legalEntityLivestockInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityLivestockRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityLivestockRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="legalEntityRegnum" type="xs:string"/>
+          <xs:element name="year" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200118_legalEntityLivestockInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityLivestockData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bagName" type="xs:string"/>
+      <xs:element name="camelCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="cityName" type="xs:string"/>
+      <xs:element name="cowCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="districtName" type="xs:string"/>
+      <xs:element name="goatCount" type="xs:int"/>
+      <xs:element name="horseCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="legalEntityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalEntityRegnum" type="xs:string"/>
+      <xs:element name="sheepCount" type="xs:int"/>
+      <xs:element name="totalCount" type="xs:int"/>
+      <xs:element name="year" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200138_GetImeiLostDeviceList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getImeiLostDeviceListRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getImeiLostDeviceListRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="status" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200138_GetImeiLostDeviceListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getImeiLostDeviceListData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="data" nillable="true" type="tns:getImeiLostDeviceListDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getImeiLostDeviceListDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="asapTypeName" type="xs:string"/>
+      <xs:element name="bno" type="xs:long"/>
+      <xs:element minOccurs="0" name="brandName" type="xs:string"/>
+      <xs:element minOccurs="0" name="color" type="xs:string"/>
+      <xs:element minOccurs="0" name="imeiCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="imeiCode2" type="xs:string"/>
+      <xs:element minOccurs="0" name="imeiCodeFull" type="xs:string"/>
+      <xs:element minOccurs="0" name="mark" type="xs:string"/>
+      <xs:element minOccurs="0" name="mobileTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="placeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="recieved" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200106_citizenSuggestionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenSuggestionRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenSuggestionRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accessToken" type="xs:string"/>
+          <xs:element minOccurs="0" name="bagCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="bagName" type="xs:string"/>
+          <xs:element minOccurs="0" name="birthDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="cityCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="cityName" type="xs:string"/>
+          <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+          <xs:element minOccurs="0" name="districtCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="districtName" type="xs:string"/>
+          <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+          <xs:element minOccurs="0" name="gender" type="xs:string"/>
+          <xs:element minOccurs="0" name="grantCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="image" type="xs:string"/>
+          <xs:element minOccurs="0" name="ipAddress" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+          <xs:element minOccurs="0" name="passportAddress" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element minOccurs="0" name="state" type="xs:string"/>
+          <xs:element minOccurs="0" name="surname" type="xs:string"/>
+          <xs:element name="year" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200106_citizenSuggestionInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenSuggestionData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="additionalDetailList" nillable="true" type="tns:suggestionAdditionalDetailData"/>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element name="age" type="xs:int"/>
+      <xs:element minOccurs="0" name="aimagName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagName" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthDate" type="xs:string"/>
+      <xs:element name="budgetFor2YearsAgo" type="xs:double"/>
+      <xs:element name="budgetFor3YearsAgo" type="xs:double"/>
+      <xs:element name="budgetForLastYear" type="xs:double"/>
+      <xs:element name="budgetForYear" type="xs:double"/>
+      <xs:element name="canVote" type="xs:int"/>
+      <xs:element name="citizenVote" type="xs:int"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="fundedDetailList" nillable="true" type="tns:suggestionLDFundedDetailData"/>
+      <xs:element minOccurs="0" name="genderName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="livestockTaxDetailList" nillable="true" type="tns:suggestionLivestockTaxDetailData"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumName" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+      <xs:element minOccurs="0" name="voteEndDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="voteStartDate" type="xs:string"/>
+      <xs:element name="year" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="suggestionAdditionalDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="capacity" type="xs:string"/>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element minOccurs="0" name="location" type="xs:string"/>
+      <xs:element minOccurs="0" name="socialImpact" type="xs:string"/>
+      <xs:element name="targetNumber" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="suggestionLDFundedDetailData">
+    <xs:sequence>
+      <xs:element name="activityCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="activityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="capacity" type="xs:string"/>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element minOccurs="0" name="investTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="location" type="xs:string"/>
+      <xs:element name="value" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="suggestionLivestockTaxDetailData">
+    <xs:sequence>
+      <xs:element name="categoryCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element name="id" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS200110_livestockTaxSurveyService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:livestockTaxSurveyRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="livestockTaxSurveyRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="bagCode" type="xs:int"/>
+          <xs:element minOccurs="0" name="categoryCode" type="xs:string"/>
+          <xs:element name="code" type="xs:int"/>
+          <xs:element minOccurs="0" name="description" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element name="year" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS200110_livestockTaxSurveyServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WS200101_citizenInfo">
+    <wsdl:part element="tns:WS200101_citizenInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200116_changeNameInfo">
+    <wsdl:part element="tns:WS200116_changeNameInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200135_citizenAndLegalEntityLivestockInfo">
+    <wsdl:part element="tns:WS200135_citizenAndLegalEntityLivestockInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200101_citizenInfoResponse">
+    <wsdl:part element="tns:WS200101_citizenInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200111_deleteLivestockTaxSurveyServiceResponse">
+    <wsdl:part element="tns:WS200111_deleteLivestockTaxSurveyServiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200140_EStandardDownloadPDFResponse">
+    <wsdl:part element="tns:WS200140_EStandardDownloadPDFResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200102_citizenPastureInfo">
+    <wsdl:part element="tns:WS200102_citizenPastureInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200137_getCitizenEstimationInfo">
+    <wsdl:part element="tns:WS200137_getCitizenEstimationInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200127_citizenLivestockListResponse">
+    <wsdl:part element="tns:WS200127_citizenLivestockListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200122_houseHoldCountByLocationResponse">
+    <wsdl:part element="tns:WS200122_houseHoldCountByLocationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200135_citizenAndLegalEntityLivestockInfoResponse">
+    <wsdl:part element="tns:WS200135_citizenAndLegalEntityLivestockInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200130_citizenLivestockByRegion">
+    <wsdl:part element="tns:WS200130_citizenLivestockByRegion" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200105_householdInfoResponse">
+    <wsdl:part element="tns:WS200105_householdInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200123_houseHoldLiveStockInfo">
+    <wsdl:part element="tns:WS200123_houseHoldLiveStockInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200106_citizenSuggestionInfoResponse">
+    <wsdl:part element="tns:WS200106_citizenSuggestionInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200121_residentCountByLocationResponse">
+    <wsdl:part element="tns:WS200121_residentCountByLocationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200127_citizenLivestockList">
+    <wsdl:part element="tns:WS200127_citizenLivestockList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200133_citizenAddressInfo">
+    <wsdl:part element="tns:WS200133_citizenAddressInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200126_umnsHouseholdInfo">
+    <wsdl:part element="tns:WS200126_umnsHouseholdInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200141_StatisticReportA">
+    <wsdl:part element="tns:WS200141_StatisticReportA" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200113_citizenFeedbackVerify">
+    <wsdl:part element="tns:WS200113_citizenFeedbackVerify" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200117_citizenLivestockInfo">
+    <wsdl:part element="tns:WS200117_citizenLivestockInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200122_houseHoldCountByLocation">
+    <wsdl:part element="tns:WS200122_houseHoldCountByLocation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200116_changeNameInfoResponse">
+    <wsdl:part element="tns:WS200116_changeNameInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200113_citizenFeedbackVerifyResponse">
+    <wsdl:part element="tns:WS200113_citizenFeedbackVerifyResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200110_livestockTaxSurveyServiceResponse">
+    <wsdl:part element="tns:WS200110_livestockTaxSurveyServiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200120_maleResidentCountByLocation">
+    <wsdl:part element="tns:WS200120_maleResidentCountByLocation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200126_umnsHouseholdInfoResponse">
+    <wsdl:part element="tns:WS200126_umnsHouseholdInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200107_ldfundedSurveyService">
+    <wsdl:part element="tns:WS200107_ldfundedSurveyService" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200107_ldfundedSurveyServiceResponse">
+    <wsdl:part element="tns:WS200107_ldfundedSurveyServiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200140_EStandardDownloadPDF">
+    <wsdl:part element="tns:WS200140_EStandardDownloadPDF" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200104_householdMemberInfo">
+    <wsdl:part element="tns:WS200104_householdMemberInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200124_umnsLivestockInfo">
+    <wsdl:part element="tns:WS200124_umnsLivestockInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200125_householdInfoByRegnumResponse">
+    <wsdl:part element="tns:WS200125_householdInfoByRegnumResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200119_femaleResidentCountByLocation">
+    <wsdl:part element="tns:WS200119_femaleResidentCountByLocation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200131_legalEntityLivestockByRegion">
+    <wsdl:part element="tns:WS200131_legalEntityLivestockByRegion" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200109_deleteAdditionalSurveyService">
+    <wsdl:part element="tns:WS200109_deleteAdditionalSurveyService" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200128_legalEntityLivestockListResponse">
+    <wsdl:part element="tns:WS200128_legalEntityLivestockListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200104_householdMemberInfoResponse">
+    <wsdl:part element="tns:WS200104_householdMemberInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200123_houseHoldLiveStockInfoResponse">
+    <wsdl:part element="tns:WS200123_houseHoldLiveStockInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200120_maleResidentCountByLocationResponse">
+    <wsdl:part element="tns:WS200120_maleResidentCountByLocationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200110_livestockTaxSurveyService">
+    <wsdl:part element="tns:WS200110_livestockTaxSurveyService" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200137_getCitizenEstimationInfoResponse">
+    <wsdl:part element="tns:WS200137_getCitizenEstimationInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200109_deleteAdditionalSurveyServiceResponse">
+    <wsdl:part element="tns:WS200109_deleteAdditionalSurveyServiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200134_citizenAndLegalEntityLivestockInfoResponse">
+    <wsdl:part element="tns:WS200134_citizenAndLegalEntityLivestockInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200119_femaleResidentCountByLocationResponse">
+    <wsdl:part element="tns:WS200119_femaleResidentCountByLocationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200136_getHouseholdInfo">
+    <wsdl:part element="tns:WS200136_getHouseholdInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200112_getLivestockTaxTypeResponse">
+    <wsdl:part element="tns:WS200112_getLivestockTaxTypeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200139_EStandardListResponse">
+    <wsdl:part element="tns:WS200139_EStandardListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200141_StatisticReportAResponse">
+    <wsdl:part element="tns:WS200141_StatisticReportAResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200114_citizenStatisticInfoResponse">
+    <wsdl:part element="tns:WS200114_citizenStatisticInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200114_citizenStatisticInfo">
+    <wsdl:part element="tns:WS200114_citizenStatisticInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200124_umnsLivestockInfoResponse">
+    <wsdl:part element="tns:WS200124_umnsLivestockInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200129_disabledWorkerNumResponse">
+    <wsdl:part element="tns:WS200129_disabledWorkerNumResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200103_personInfo">
+    <wsdl:part element="tns:WS200103_personInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200112_getLivestockTaxType">
+    <wsdl:part element="tns:WS200112_getLivestockTaxType" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200139_EStandardList">
+    <wsdl:part element="tns:WS200139_EStandardList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200115_changeRegisterInfoResponse">
+    <wsdl:part element="tns:WS200115_changeRegisterInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200130_citizenLivestockByRegionResponse">
+    <wsdl:part element="tns:WS200130_citizenLivestockByRegionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200111_deleteLivestockTaxSurveyService">
+    <wsdl:part element="tns:WS200111_deleteLivestockTaxSurveyService" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200115_changeRegisterInfo">
+    <wsdl:part element="tns:WS200115_changeRegisterInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200134_citizenAndLegalEntityLivestockInfo">
+    <wsdl:part element="tns:WS200134_citizenAndLegalEntityLivestockInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200105_householdInfo">
+    <wsdl:part element="tns:WS200105_householdInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200125_householdInfoByRegnum">
+    <wsdl:part element="tns:WS200125_householdInfoByRegnum" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200103_personInfoResponse">
+    <wsdl:part element="tns:WS200103_personInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200131_legalEntityLivestockByRegionResponse">
+    <wsdl:part element="tns:WS200131_legalEntityLivestockByRegionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200108_additionalSurveyService">
+    <wsdl:part element="tns:WS200108_additionalSurveyService" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200118_legalEntityLivestockInfoResponse">
+    <wsdl:part element="tns:WS200118_legalEntityLivestockInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200102_citizenPastureInfoResponse">
+    <wsdl:part element="tns:WS200102_citizenPastureInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200121_residentCountByLocation">
+    <wsdl:part element="tns:WS200121_residentCountByLocation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200136_getHouseholdInfoResponse">
+    <wsdl:part element="tns:WS200136_getHouseholdInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200138_GetImeiLostDeviceListResponse">
+    <wsdl:part element="tns:WS200138_GetImeiLostDeviceListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200133_citizenAddressInfoResponse">
+    <wsdl:part element="tns:WS200133_citizenAddressInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200108_additionalSurveyServiceResponse">
+    <wsdl:part element="tns:WS200108_additionalSurveyServiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200129_disabledWorkerNum">
+    <wsdl:part element="tns:WS200129_disabledWorkerNum" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200128_legalEntityLivestockList">
+    <wsdl:part element="tns:WS200128_legalEntityLivestockList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200118_legalEntityLivestockInfo">
+    <wsdl:part element="tns:WS200118_legalEntityLivestockInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200138_GetImeiLostDeviceList">
+    <wsdl:part element="tns:WS200138_GetImeiLostDeviceList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200117_citizenLivestockInfoResponse">
+    <wsdl:part element="tns:WS200117_citizenLivestockInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS200106_citizenSuggestionInfo">
+    <wsdl:part element="tns:WS200106_citizenSuggestionInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="StatisticService">
+    <wsdl:operation name="WS200101_citizenInfo">
+      <wsdl:input message="tns:WS200101_citizenInfo" name="WS200101_citizenInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200101_citizenInfoResponse" name="WS200101_citizenInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200116_changeNameInfo">
+      <wsdl:input message="tns:WS200116_changeNameInfo" name="WS200116_changeNameInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200116_changeNameInfoResponse" name="WS200116_changeNameInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200135_citizenAndLegalEntityLivestockInfo">
+      <wsdl:input message="tns:WS200135_citizenAndLegalEntityLivestockInfo" name="WS200135_citizenAndLegalEntityLivestockInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200135_citizenAndLegalEntityLivestockInfoResponse" name="WS200135_citizenAndLegalEntityLivestockInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200136_getHouseholdInfo">
+      <wsdl:input message="tns:WS200136_getHouseholdInfo" name="WS200136_getHouseholdInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200136_getHouseholdInfoResponse" name="WS200136_getHouseholdInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200102_citizenPastureInfo">
+      <wsdl:input message="tns:WS200102_citizenPastureInfo" name="WS200102_citizenPastureInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200102_citizenPastureInfoResponse" name="WS200102_citizenPastureInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200137_getCitizenEstimationInfo">
+      <wsdl:input message="tns:WS200137_getCitizenEstimationInfo" name="WS200137_getCitizenEstimationInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200137_getCitizenEstimationInfoResponse" name="WS200137_getCitizenEstimationInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200114_citizenStatisticInfo">
+      <wsdl:input message="tns:WS200114_citizenStatisticInfo" name="WS200114_citizenStatisticInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200114_citizenStatisticInfoResponse" name="WS200114_citizenStatisticInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200130_citizenLivestockByRegion">
+      <wsdl:input message="tns:WS200130_citizenLivestockByRegion" name="WS200130_citizenLivestockByRegion">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200130_citizenLivestockByRegionResponse" name="WS200130_citizenLivestockByRegionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200103_personInfo">
+      <wsdl:input message="tns:WS200103_personInfo" name="WS200103_personInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200103_personInfoResponse" name="WS200103_personInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200112_getLivestockTaxType">
+      <wsdl:input message="tns:WS200112_getLivestockTaxType" name="WS200112_getLivestockTaxType">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200112_getLivestockTaxTypeResponse" name="WS200112_getLivestockTaxTypeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200123_houseHoldLiveStockInfo">
+      <wsdl:input message="tns:WS200123_houseHoldLiveStockInfo" name="WS200123_houseHoldLiveStockInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200123_houseHoldLiveStockInfoResponse" name="WS200123_houseHoldLiveStockInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200139_EStandardList">
+      <wsdl:input message="tns:WS200139_EStandardList" name="WS200139_EStandardList">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200139_EStandardListResponse" name="WS200139_EStandardListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200111_deleteLivestockTaxSurveyService">
+      <wsdl:input message="tns:WS200111_deleteLivestockTaxSurveyService" name="WS200111_deleteLivestockTaxSurveyService">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200111_deleteLivestockTaxSurveyServiceResponse" name="WS200111_deleteLivestockTaxSurveyServiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200127_citizenLivestockList">
+      <wsdl:input message="tns:WS200127_citizenLivestockList" name="WS200127_citizenLivestockList">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200127_citizenLivestockListResponse" name="WS200127_citizenLivestockListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200133_citizenAddressInfo">
+      <wsdl:input message="tns:WS200133_citizenAddressInfo" name="WS200133_citizenAddressInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200133_citizenAddressInfoResponse" name="WS200133_citizenAddressInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200115_changeRegisterInfo">
+      <wsdl:input message="tns:WS200115_changeRegisterInfo" name="WS200115_changeRegisterInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200115_changeRegisterInfoResponse" name="WS200115_changeRegisterInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200134_citizenAndLegalEntityLivestockInfo">
+      <wsdl:input message="tns:WS200134_citizenAndLegalEntityLivestockInfo" name="WS200134_citizenAndLegalEntityLivestockInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200134_citizenAndLegalEntityLivestockInfoResponse" name="WS200134_citizenAndLegalEntityLivestockInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200105_householdInfo">
+      <wsdl:input message="tns:WS200105_householdInfo" name="WS200105_householdInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200105_householdInfoResponse" name="WS200105_householdInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200125_householdInfoByRegnum">
+      <wsdl:input message="tns:WS200125_householdInfoByRegnum" name="WS200125_householdInfoByRegnum">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200125_householdInfoByRegnumResponse" name="WS200125_householdInfoByRegnumResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200126_umnsHouseholdInfo">
+      <wsdl:input message="tns:WS200126_umnsHouseholdInfo" name="WS200126_umnsHouseholdInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200126_umnsHouseholdInfoResponse" name="WS200126_umnsHouseholdInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200141_StatisticReportA">
+      <wsdl:input message="tns:WS200141_StatisticReportA" name="WS200141_StatisticReportA">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200141_StatisticReportAResponse" name="WS200141_StatisticReportAResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200113_citizenFeedbackVerify">
+      <wsdl:input message="tns:WS200113_citizenFeedbackVerify" name="WS200113_citizenFeedbackVerify">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200113_citizenFeedbackVerifyResponse" name="WS200113_citizenFeedbackVerifyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200117_citizenLivestockInfo">
+      <wsdl:input message="tns:WS200117_citizenLivestockInfo" name="WS200117_citizenLivestockInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200117_citizenLivestockInfoResponse" name="WS200117_citizenLivestockInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200122_houseHoldCountByLocation">
+      <wsdl:input message="tns:WS200122_houseHoldCountByLocation" name="WS200122_houseHoldCountByLocation">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200122_houseHoldCountByLocationResponse" name="WS200122_houseHoldCountByLocationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200120_maleResidentCountByLocation">
+      <wsdl:input message="tns:WS200120_maleResidentCountByLocation" name="WS200120_maleResidentCountByLocation">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200120_maleResidentCountByLocationResponse" name="WS200120_maleResidentCountByLocationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200107_ldfundedSurveyService">
+      <wsdl:input message="tns:WS200107_ldfundedSurveyService" name="WS200107_ldfundedSurveyService">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200107_ldfundedSurveyServiceResponse" name="WS200107_ldfundedSurveyServiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200140_EStandardDownloadPDF">
+      <wsdl:input message="tns:WS200140_EStandardDownloadPDF" name="WS200140_EStandardDownloadPDF">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200140_EStandardDownloadPDFResponse" name="WS200140_EStandardDownloadPDFResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200108_additionalSurveyService">
+      <wsdl:input message="tns:WS200108_additionalSurveyService" name="WS200108_additionalSurveyService">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200108_additionalSurveyServiceResponse" name="WS200108_additionalSurveyServiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200104_householdMemberInfo">
+      <wsdl:input message="tns:WS200104_householdMemberInfo" name="WS200104_householdMemberInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200104_householdMemberInfoResponse" name="WS200104_householdMemberInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200124_umnsLivestockInfo">
+      <wsdl:input message="tns:WS200124_umnsLivestockInfo" name="WS200124_umnsLivestockInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200124_umnsLivestockInfoResponse" name="WS200124_umnsLivestockInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200119_femaleResidentCountByLocation">
+      <wsdl:input message="tns:WS200119_femaleResidentCountByLocation" name="WS200119_femaleResidentCountByLocation">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200119_femaleResidentCountByLocationResponse" name="WS200119_femaleResidentCountByLocationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200121_residentCountByLocation">
+      <wsdl:input message="tns:WS200121_residentCountByLocation" name="WS200121_residentCountByLocation">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200121_residentCountByLocationResponse" name="WS200121_residentCountByLocationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200131_legalEntityLivestockByRegion">
+      <wsdl:input message="tns:WS200131_legalEntityLivestockByRegion" name="WS200131_legalEntityLivestockByRegion">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200131_legalEntityLivestockByRegionResponse" name="WS200131_legalEntityLivestockByRegionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200129_disabledWorkerNum">
+      <wsdl:input message="tns:WS200129_disabledWorkerNum" name="WS200129_disabledWorkerNum">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200129_disabledWorkerNumResponse" name="WS200129_disabledWorkerNumResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200109_deleteAdditionalSurveyService">
+      <wsdl:input message="tns:WS200109_deleteAdditionalSurveyService" name="WS200109_deleteAdditionalSurveyService">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200109_deleteAdditionalSurveyServiceResponse" name="WS200109_deleteAdditionalSurveyServiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200128_legalEntityLivestockList">
+      <wsdl:input message="tns:WS200128_legalEntityLivestockList" name="WS200128_legalEntityLivestockList">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200128_legalEntityLivestockListResponse" name="WS200128_legalEntityLivestockListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200118_legalEntityLivestockInfo">
+      <wsdl:input message="tns:WS200118_legalEntityLivestockInfo" name="WS200118_legalEntityLivestockInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200118_legalEntityLivestockInfoResponse" name="WS200118_legalEntityLivestockInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200138_GetImeiLostDeviceList">
+      <wsdl:input message="tns:WS200138_GetImeiLostDeviceList" name="WS200138_GetImeiLostDeviceList">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200138_GetImeiLostDeviceListResponse" name="WS200138_GetImeiLostDeviceListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200106_citizenSuggestionInfo">
+      <wsdl:input message="tns:WS200106_citizenSuggestionInfo" name="WS200106_citizenSuggestionInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200106_citizenSuggestionInfoResponse" name="WS200106_citizenSuggestionInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200110_livestockTaxSurveyService">
+      <wsdl:input message="tns:WS200110_livestockTaxSurveyService" name="WS200110_livestockTaxSurveyService">
+    </wsdl:input>
+      <wsdl:output message="tns:WS200110_livestockTaxSurveyServiceResponse" name="WS200110_livestockTaxSurveyServiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StatisticServiceServiceSoapBinding" type="tns:StatisticService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WS200101_citizenInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200101_citizenInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200101_citizenInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200116_changeNameInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200116_changeNameInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200116_changeNameInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200135_citizenAndLegalEntityLivestockInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200135_citizenAndLegalEntityLivestockInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200135_citizenAndLegalEntityLivestockInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200136_getHouseholdInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200136_getHouseholdInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200136_getHouseholdInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200102_citizenPastureInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200102_citizenPastureInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200102_citizenPastureInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200137_getCitizenEstimationInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200137_getCitizenEstimationInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200137_getCitizenEstimationInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200114_citizenStatisticInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200114_citizenStatisticInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200114_citizenStatisticInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200130_citizenLivestockByRegion">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200130_citizenLivestockByRegion">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200130_citizenLivestockByRegionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200103_personInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200103_personInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200103_personInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200112_getLivestockTaxType">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200112_getLivestockTaxType">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200112_getLivestockTaxTypeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200123_houseHoldLiveStockInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200123_houseHoldLiveStockInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200123_houseHoldLiveStockInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200139_EStandardList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200139_EStandardList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200139_EStandardListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200111_deleteLivestockTaxSurveyService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200111_deleteLivestockTaxSurveyService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200111_deleteLivestockTaxSurveyServiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200127_citizenLivestockList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200127_citizenLivestockList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200127_citizenLivestockListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200133_citizenAddressInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200133_citizenAddressInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200133_citizenAddressInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200115_changeRegisterInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200115_changeRegisterInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200115_changeRegisterInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200134_citizenAndLegalEntityLivestockInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200134_citizenAndLegalEntityLivestockInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200134_citizenAndLegalEntityLivestockInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200105_householdInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200105_householdInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200105_householdInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200125_householdInfoByRegnum">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200125_householdInfoByRegnum">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200125_householdInfoByRegnumResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200126_umnsHouseholdInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200126_umnsHouseholdInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200126_umnsHouseholdInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200141_StatisticReportA">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200141_StatisticReportA">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200141_StatisticReportAResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200113_citizenFeedbackVerify">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200113_citizenFeedbackVerify">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200113_citizenFeedbackVerifyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200117_citizenLivestockInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200117_citizenLivestockInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200117_citizenLivestockInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200122_houseHoldCountByLocation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200122_houseHoldCountByLocation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200122_houseHoldCountByLocationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200120_maleResidentCountByLocation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200120_maleResidentCountByLocation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200120_maleResidentCountByLocationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200107_ldfundedSurveyService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200107_ldfundedSurveyService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200107_ldfundedSurveyServiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200140_EStandardDownloadPDF">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200140_EStandardDownloadPDF">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200140_EStandardDownloadPDFResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200108_additionalSurveyService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200108_additionalSurveyService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200108_additionalSurveyServiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200104_householdMemberInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200104_householdMemberInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200104_householdMemberInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200124_umnsLivestockInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200124_umnsLivestockInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200124_umnsLivestockInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200119_femaleResidentCountByLocation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200119_femaleResidentCountByLocation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200119_femaleResidentCountByLocationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200121_residentCountByLocation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200121_residentCountByLocation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200121_residentCountByLocationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200131_legalEntityLivestockByRegion">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200131_legalEntityLivestockByRegion">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200131_legalEntityLivestockByRegionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200129_disabledWorkerNum">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200129_disabledWorkerNum">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200129_disabledWorkerNumResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200109_deleteAdditionalSurveyService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200109_deleteAdditionalSurveyService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200109_deleteAdditionalSurveyServiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200128_legalEntityLivestockList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200128_legalEntityLivestockList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200128_legalEntityLivestockListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200118_legalEntityLivestockInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200118_legalEntityLivestockInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200118_legalEntityLivestockInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200138_GetImeiLostDeviceList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200138_GetImeiLostDeviceList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200138_GetImeiLostDeviceListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200106_citizenSuggestionInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200106_citizenSuggestionInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200106_citizenSuggestionInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS200110_livestockTaxSurveyService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS200110_livestockTaxSurveyService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS200110_livestockTaxSurveyServiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StatisticServiceService">
+    <wsdl:port binding="tns:StatisticServiceServiceSoapBinding" name="StatisticServicePort">
+      <soap:address location="http://xyp.gov.mn/statistic-1.5.0/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

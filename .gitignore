@@ -1,0 +1,30 @@
+# deps
+node_modules/
+
+# TypeScript build
+dist/
+*.tsbuildinfo
+
+# secrets & credentials — NEVER commit
+.env
+*.pem
+*.der
+*.key
+keys/
+certs/
+
+# VPN / auth — NEVER commit
+*.ovpn
+datacenter.ovpn
+auth.txt
+deploy/auth.txt
+
+# downloaded wsdl cache is optional to commit; ignore by default
+# (remove this line if you want the downloaded WSDLs tracked)
+wsdl/_cache/
+
+# logs / os
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db

@@ -1,0 +1,11 @@
+{
+  "host": "https://xyp.gov.mn",
+  "version": "1.5.0",
+  "_comment": "Танай байгууллага хандах эрхтэй домэйнуудаа энд нэмж/хасна. url-г хоосон орхивол host+version-оос автоматаар үүснэ: <host>/<name>-<version>/ws?WSDL",
+  "endpoints": [
+    { "name": "citizen",   "ns": "http://citizen.xyp.gov.mn/",   "url": "" },
+    { "name": "insurance", "ns": "http://insurance.xyp.gov.mn/", "url": "" },
+    { "name": "transport", "ns": "http://transport.xyp.gov.mn/", "url": "" },
+    { "name": "statistic", "ns": "http://statistic.xyp.gov.mn/", "url": "" }
+  ]
+}

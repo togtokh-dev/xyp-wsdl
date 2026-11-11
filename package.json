@@ -1,0 +1,41 @@
+{
+  "name": "xyp-wsdl",
+  "version": "0.1.0",
+  "description": "XYP (ХУР) government data-exchange SOAP client for Node.js/TypeScript — signed requests, multi-endpoint WSDL download, local testing",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "download:wsdl": "tsx scripts/download-wsdl.ts",
+    "download:all": "tsx scripts/download-wsdl.ts --all",
+    "test": "node --import tsx --test test/signature.test.ts test/wsdl-parse.test.ts",
+    "test:offline": "node --import tsx --test test/signature.test.ts test/wsdl-parse.test.ts",
+    "test:live": "tsx test/citizen.live.ts"
+  },
+  "keywords": [
+    "xyp",
+    "hur",
+    "mongolia",
+    "soap",
+    "wsdl",
+    "government",
+    "datacenter",
+    "typescript"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist",
+    "endpoints.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "soap": "^1.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
