@@ -1,6 +1,6 @@
 {
   "name": "xyp-wsdl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "XYP (ХУР) government data-exchange SOAP client for Node.js/TypeScript — signed requests, multi-endpoint WSDL download, local testing",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -24,6 +24,15 @@
     "typescript"
   ],
   "license": "MIT",
+  "author": "TOGTOKH.DEV",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/togtokh-dev/xyp-wsdl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/togtokh-dev/xyp-wsdl/issues"
+  },
+  "homepage": "https://github.com/togtokh-dev/xyp-wsdl#readme",
   "files": [
     "dist",
     "endpoints.json",
