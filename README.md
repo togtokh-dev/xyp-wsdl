@@ -59,6 +59,7 @@ XYP-ийн `xyp.gov.mn` endpoint нь **зөвхөн VPN**-ээр холбогд
 > ([deploy хэсэг](#7-ubuntu-сервер-дээр-deploy-хийх)).
 
 ### Сертификат (TLS алдаа гарвал)
+
 - Root **MNRCA-2021** — https://esign.gov.mn/MNRCA.zip → Trusted Root
 - Intermediate **MNICA-2021/2022** — https://esign.gov.mn/MNICA.zip → Intermediate
 - Эсвэл түр зуур `.env`-д `XYP_CA_FILE=<ca.pem>` / `XYP_INSECURE_TLS=1` (зөвхөн локал).
@@ -71,13 +72,13 @@ cp .env.example .env
 
 `.env`-д дараахыг бөглөнө (жинхэнэ утгыг git-д **хэзээ ч** оруулахгүй):
 
-| Хувьсагч | Утга |
-|---|---|
-| `XYP_ACCESS_TOKEN` | байгууллагад олгогдсон токен |
+| Хувьсагч               | Утга                                             |
+| ---------------------- | ------------------------------------------------ |
+| `XYP_ACCESS_TOKEN`     | байгууллагад олгогдсон токен                     |
 | `XYP_PRIVATE_KEY_PATH` | RSA хувийн түлхүүрийн зам (`./keys/private.pem`) |
-| `XYP_HOST` | `https://xyp.gov.mn` |
-| `XYP_VERSION` | `1.5.0` |
-| `XYP_DOMAIN` | live тестийн домэйн (`citizen` гм) |
+| `XYP_HOST`             | `https://xyp.gov.mn`                             |
+| `XYP_VERSION`          | `1.5.0`                                          |
+| `XYP_DOMAIN`           | live тестийн домэйн (`citizen` гм)               |
 
 ## 4. Endpoint-ууд
 
@@ -88,7 +89,7 @@ cp .env.example .env
   "host": "https://xyp.gov.mn",
   "version": "1.5.0",
   "endpoints": [
-    { "name": "citizen",   "ns": "http://citizen.xyp.gov.mn/" },
+    { "name": "citizen", "ns": "http://citizen.xyp.gov.mn/" },
     { "name": "insurance", "ns": "http://insurance.xyp.gov.mn/" }
   ]
 }
@@ -120,13 +121,16 @@ npm run test:live -- УБ99112233      # жинхэнэ дуудлага (VPN + 
 ### Кодоос ашиглах
 
 ```ts
-import { XypClient, loadConfig } from 'xyp-wsdl';
+import { XypClient, loadConfig } from "xyp-wsdl";
 
 const cfg = loadConfig();
-const client = await XypClient.create({ ...cfg, domain: 'citizen' });
+const client = await XypClient.create({ ...cfg, domain: "citizen" });
 
-const { result } = await client.call('WS100101_getCitizenIDCardInfo', {
-  request: { regnum: 'УБ99112233', auth: { citizen: { authType: '', otp: '' } } },
+const { result } = await client.call("WS100101_getCitizenIDCardInfo", {
+  request: {
+    regnum: "УБ99112233",
+    auth: { citizen: { authType: "", otp: "" } }
+  }
 });
 console.log(result);
 ```
@@ -136,13 +140,13 @@ console.log(result);
 
 #### Аутентификацийн төрөл (authType)
 
-| Утга | Арга | Талбарууд |
-|------|------|-----------|
-| 1 | OTP | otp, regnum |
-| 2 | Тоон гарын үсэг | signature, certFingerprint, regnum |
-| 3 | Хурууны хээ | fingerprint, regnum |
-| 4 | SSO OTP | otp, regnum |
-| 5 | ДАН апп | regnum |
+| Утга | Арга            | Талбарууд                          |
+| ---- | --------------- | ---------------------------------- |
+| 1    | OTP             | otp, regnum                        |
+| 2    | Тоон гарын үсэг | signature, certFingerprint, regnum |
+| 3    | Хурууны хээ     | fingerprint, regnum                |
+| 4    | SSO OTP         | otp, regnum                        |
+| 5    | ДАН апп         | regnum                             |
 
 ## 7. Ubuntu сервер дээр deploy хийх
 
@@ -181,6 +185,7 @@ journalctl -u openvpn-client@xyp-datacenter -f
   git-д оруулж болохгүй — эдгээр нь `.gitignore`-д орсон.
 - `.env.example`, `deploy/auth.txt.example` нь зөвхөн **placeholder** агуулна.
 - `NODE_TLS_REJECT_UNAUTHORIZED=0` (бүх процессод) ашиглахаас зайлсхий — CA суулга.
+  v2
 
 ## Лавлагаа
 
